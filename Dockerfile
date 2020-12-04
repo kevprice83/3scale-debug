@@ -14,3 +14,6 @@ RUN apk add --no-cache ca-certificates openssl
 
 # processes/io
 RUN apk add --no-cache htop atop strace iotop sysstat ltrace ncdu logrotate hdparm pciutils psmisc tree pv
+
+# maintainer of this image
+LABEL maintainer=kevprice@redhat.com
