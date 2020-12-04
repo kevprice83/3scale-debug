@@ -17,7 +17,7 @@ docker run --rm -ti --net container:<container-id> quay.io/amoran/3scale-debug
 ## Openshift (via oc run) **Recommended** as it doesn't involve changing deployments
 
 ```
-oc run 3scale-debug -i --tty --rm --image=quay.io/amoran/3scale-debug:latest
+oc run 3scale-debug -i --tty --rm --image=quay.io/3scale/3scaledebug:latest
 ```
 
 ## Sidecar
