@@ -11,7 +11,7 @@ This container contains a few debugging tools that can be needed when debugging 
 ## Attach to an existing docker container
 
 ```
-docker run --rm -ti --net container:<container-id> quay.io/amoran/3scale-debug
+docker run --rm -ti --net container:<container-id> quay.io/3scale/3scaledebug:latest
 ```
 
 ## Openshift (via oc run) **Recommended** as it doesn't involve changing deployments
@@ -25,7 +25,7 @@ oc run 3scale-debug -i --tty --rm --image=quay.io/3scale/3scaledebug:latest
 ### Patch Add
 
 ```
-oc patch dc/<deployment config name> --type='json' -p='[{"op": "add", "path": "/spec/template/spec/containers/0", "value": {"command": ["/bin/sleep","infinity"],"image": "quay.io/amoran/3scale-debug","name": "3scale-debug"} }]'
+oc patch dc/<deployment config name> --type='json' -p='[{"op": "add", "path": "/spec/template/spec/containers/0", "value": {"command": ["/bin/sleep","infinity"],"image": "quay.io/3scale/3scaledebug:latest","name": "3scaledebug"} }]'
 ```
 
 ### Patch Remove
