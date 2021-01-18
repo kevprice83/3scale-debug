@@ -1,6 +1,6 @@
 # 3scale debug container
 
-This container contains a few debugging tools that can be needed when debugging 3scale issues. Based on alpine.
+This container contains a few debugging tools that may be needed when debugging 3scale issues. Based on alpine.
 
 - Build: `build-base git go bash bash-completion vim jq`
 - Databases: `mysql-client postgresql-client redis`
